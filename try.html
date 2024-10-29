@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .testimonial-container {
+    width: 80%;
+    max-width: 800px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Slider styles */
+.testimonial-slider {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 600%;
+    /* 6 items */
+}
+
+.testimonial {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.testimonial img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.testimonial p {
+    font-size: 1em;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.testimonial h4 {
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .testimonial img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .testimonial p {
+        font-size: 0.9em;
+    }
+
+    .testimonial h4 {
+        font-size: 1em;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="testimonial-container">
+        <div class="testimonial-slider">
+            <!-- Testimonial 1 -->
+            <div class="testimonial">
+                <img src="https://via.placeholder.com/100" alt="Customer 1">
+                <p>"Great service, I'm very satisfied!"</p>
+                <h4>- Customer 1</h4>
+            </div>
+            <!-- Testimonial 2 -->
+            <div class="testimonial">
+                <img src="https://via.placeholder.com/100" alt="Customer 2">
+                <p>"The product quality is amazing."</p>
+                <h4>- Customer 2</h4>
+            </div>
+            <!-- Testimonial 3 -->
+            <div class="testimonial">
+                <img src="https://via.placeholder.com/100" alt="Customer 3">
+                <p>"Highly recommend to everyone!"</p>
+                <h4>- Customer 3</h4>
+            </div>
+            <!-- Testimonial 4 -->
+            <div class="testimonial">
+                <img src="https://via.placeholder.com/100" alt="Customer 4">
+                <p>"Fantastic experience overall."</p>
+                <h4>- Customer 4</h4>
+            </div>
+            <!-- Testimonial 5 -->
+            <div class="testimonial">
+                <img src="https://via.placeholder.com/100" alt="Customer 5">
+                <p>"Will definitely purchase again."</p>
+                <h4>- Customer 5</h4>
+            </div>
+            <!-- Testimonial 6 -->
+            <div class="testimonial">
+                <img src="https://via.placeholder.com/100" alt="Customer 6">
+                <p>"Exceeded my expectations!"</p>
+                <h4>- Customer 6</h4>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+
+<div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="container-fluid hero-section">
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <div class="container-fluid hero-section">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 hero-text text-lg-start text-center">
+                            <h1>Fast & Secure Web Hosting</h1>
+                            <p>Anything embarrassing hidden in the middle of text. All the Lorem Ipsum anything
+                                embarrassing hidden in the middle of text. All the Lorem Ipsum
+                            </p>
+                            <div class="hero-buttons">
+                                <a href="#" class="btn btn-primary me-2 ">Read More</a>
+                                <a href="#" class="btn btn-danger">Contact Us</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 illustration text-center text-lg-end">
+                            <img src="./@img/slider-1.png" alt="Hosting Illustration">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <div class="container-fluid hero-section">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 hero-text text-lg-start text-center">
+                            <h1>Reliable Web Hosting</h1>
+                            <p>Another paragraph for this slide, with additional description or unique selling
+                                point.
+                            </p>
+                            <div class="hero-buttons">
+                                <a href="#" class="btn btn-primary me-2">Discover More</a>
+                                <a href="#" class="btn btn-danger">Get Started</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 illustration text-center text-lg-end">
+                            <img src="./@img/slider-2.png" alt="Hosting Illustration">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <div class="container-fluid hero-section">
+                    <div class="row align-items-center">
+                        <div class="col-lg-6 hero-text text-lg-start text-center">
+                            <h1>Reliable Web Hosting</h1>
+                            <p>Another paragraph for this slide, with additional description or unique selling
+                                point.
+                            </p>
+                            <div class="hero-buttons">
+                                <a href="#" class="btn btn-primary me-2">Discover More</a>
+                                <a href="#" class="btn btn-danger">Get Started</a>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 illustration text-center text-lg-end">
+                            <img src="./@img/slider.png" alt="Hosting Illustration">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more slides if needed -->
+        </div>
+
+        <!-- Optional: Add carousel controls if you want manual navigation -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>

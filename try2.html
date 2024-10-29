@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COGNOZA TECHNOLOGIES</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+    <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    <!-- <link rel="stylesheet" href="boostrap/css/bootstrap.css"> -->
+    <style>
+        @font-face {
+            font-family: Montserrat;
+            src: url(./../font/static/Montserrat-Bold.ttf);
+        }
+
+        p,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        button,
+        li,
+        nav {
+            font-family: "Montserrat-Bold", sans-serif;
+            /* font-size: 13px; */
+            line-height: 1.7;
+        }
+
+        /* General Styling */
+        body {
+            background-color: #f8f9fa;
+            color: #000000;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header Styling */
+        .header,
+        .navbar {
+            background-color: #0a0b1a;
+            color: #fff;
+        }
+
+
+        /* Header Styling */
+        .header,
+        .navbar {
+            background-color: #0a0b1a;
+            color: #fff;
+        }
+
+        /* Navbar Styling */
+        .navbar {
+            background-color: transparent;
+        }
+
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .nav-link {
+            color: #fff;
+        }
+
+        .navbar .navbar-nav .nav-link:hover {
+            color: #50a3f2;
+        }
+
+        .contact-info {
+            color: #fff;
+            font-size: 16px;
+            margin-left: auto;
+        }
+
+        /* Hero Section Styling */
+        .hero-section {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 0 30px;
+            background-color: #0a0b1a;
+            color: #fff;
+        }
+
+        .hero-text {
+            max-width: 600px;
+            margin-right: 40px;
+            /* Space between text and image */
+        }
+
+        .hero-text h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            color: #aaa;
+        }
+
+        .hero-buttons .btn {
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background-color: #3fa9f5;
+            border: none;
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            background-color: transparent;
+            border: 2px solid #3fa9f5;
+            color: #3fa9f5;
+        }
+
+        .btn-danger {
+            background-color: #f35b5b;
+            border: none;
+            color: #fff;
+        }
+
+        .btn-danger:hover {
+            background-color: transparent;
+            border: 2px solid #f35b5b;
+            color: #f35b5b;
+        }
+
+        /* Illustration Styling */
+        .illustration img {
+            max-width: 100%;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 991.98px) {
+            .hero-section {
+                flex-direction: column;
+                text-align: center;
+                padding: 0 20px;
+            }
+
+            .hero-text {
+                text-align: center;
+                max-width: 100%;
+                margin-right: 0;
+                /* Remove spacing on smaller screens */
+            }
+
+            .hero-text h1 {
+                font-size: 36px;
+            }
+
+            .hero-text p {
+                font-size: 16px;
+            }
+        }
+
+        /* end */
+
+        /* about us str */
+
+        /* About Section Styling */
+        .about-section {
+            padding: 50px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        .about-text {
+            max-width: 600px;
+            color: #333;
+        }
+
+        .about-text h2 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .about-text p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .about-text .btn {
+            background-color: #ff4d4d;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+        }
+
+        .about-text .btn:hover {
+            background-color: transparent;
+            border: 2px solid #ff4d4d;
+            color: #ff4d4d;
+        }
+
+        .about-illustration img {
+            max-width: 100%;
+        }
+
+        /* Responsive Styling */
+        @media (max-width: 991.98px) {
+            .about-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .about-text {
+                margin-bottom: 30px;
+            }
+        }
+
+        /* end */
+
+        /* manage */
+
+        /* Main Section Styling */
+        .manage-section {
+            background-color: #0d0b4a;
+            padding: 50px 0;
+            color: #ffffff;
+        }
+
+        /* About Text Styling */
+        .manage-text h2 {
+            font-size: 32px;
+            font-weight: bold;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .manage-text p {
+            color: #c0c0c0;
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        .manage-text .btn {
+            background-color: #ff4d4d;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+        }
+
+        .manage-text .btn:hover {
+            background-color: transparent;
+            border: 2px solid #ff4d4d;
+            color: #ff4d4d;
+        }
+
+        /* Illustration Styling */
+        .manage-illustration img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        /* Custom Shape */
+        .custom-shape {
+            background-color: #0d0b4a;
+            clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: -1;
+        }
+
+        /* end */
+
+        /* price str */
+
+        .pricing-title {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 40px;
+        }
+
+        .cardpricing {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .price-title {
+            font-size: 24px;
+            color: #17a2b8;
+            font-weight: bold;
+        }
+
+        .price-price {
+            font-size: 36px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .price-text {
+            color: #777;
+            margin: 10px 0;
+        }
+
+        .btn-customprice {
+            background-color: #ff4d4d;
+            color: white;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .btn-customprice:hover {
+            background-color: #ff6666;
+        }
+
+        /* end */
+
+        /* Service Section Styling */
+        .services-section {
+            background-color: #f8f9fa;
+        }
+
+        .services-section h2 {
+            color: #333;
+            font-weight: bold;
+        }
+
+        /* Card Customization */
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .icon {
+            font-size: 2.5rem;
+            color: #28a745;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .card-text {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        /* end */
+
+        /* footer str */
+        footer {
+            background-color: #1a1a1a;
+            /* Dark background */
+            color: #d3d3d3;
+            /* Light text color for readability */
+            padding: 40px 0;
+        }
+
+        footer a {
+            color: #a0d1f2;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer a:hover {
+            color: #ffffff;
+        }
+
+        footer h5 {
+            color: #ffffff;
+            /* Header text color */
+        }
+
+        footer .bi {
+            font-size: 1.2rem;
+        }
+
+        footer .d-flex a {
+            font-size: 1.4rem;
+            color: #a0d1f2;
+        }
+
+        footer .d-flex a:hover {
+            color: #ffffff;
+        }
+
+        /* end */
+
+        /* testimonal str */
+        /* Testimonial Section Styling */
+        .testimonial-section {
+            background-color: #fff;
+            padding: 40px 0;
+        }
+
+        .testimonial {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .testimonial img {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+        }
+
+        .testimonial p {
+            font-style: italic;
+            color: #555;
+        }
+
+        .testimonial h5 {
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* end */
+
+        /* team */
+        /*******************************/
+        /*********** Team CSS **********/
+        /*******************************/
+        .team {
+            position: relative;
+            width: 100%;
+            padding: 45px 0 15px 0;
+        }
+
+        .team .team-item {
+            position: relative;
+            margin-bottom: 75px;
+        }
+
+        .team .team-img {
+            position: relative;
+        }
+
+        .team .team-img img {
+            width: 100%;
+        }
+
+        .team .team-text {
+            position: absolute;
+            width: calc(100% - 30px);
+            height: 96px;
+            bottom: -46px;
+            left: 15px;
+            padding: 25px 15px;
+            text-align: center;
+            background: rgba(256, 256, 256, .9);
+            box-shadow: 0 0 30px rgba(0, 0, 0, .1);
+            transition: .3s;
+            overflow: hidden;
+        }
+
+        .team .team-text h2 {
+            color: #0796fe;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+
+        .team .team-text p {
+            margin-bottom: 20px;
+            color: #092a49;
+        }
+
+        .team .team-social {
+            position: relative;
+            font-size: 0;
+        }
+
+        .team .team-social a {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            margin: 0 3px;
+            padding: 5px 0;
+            text-align: center;
+            font-size: 14px;
+            color: #092a49;
+            border: 2px solid #092a49;
+            transition: .3s;
+        }
+
+        .team .team-social a:hover {
+            color: #0796fe;
+            border-color: #0796fe;
+        }
+
+        .team .team-item:hover .team-text {
+            height: 160px;
+        }
+
+
+        /* end */
+    </style>
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header style="background-color: #0a0b1a;">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">COGNOZA TECHNOLOGIES</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="aboutus.html">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="team.html">Team</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contactus.html">Contact Us</a>
+                        </li>
+                    </ul>
+                    <div class="contact-info">
+                        <i class="bi bi-telephone"></i> CALL: +01 123455678990
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="container-fluid hero-section">
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="container hero-section">
+                        <div class="row align-items-center d-flex">
+                            <div class="col-lg-6 hero-text text-lg-start text-center">
+                                <h1>Welcome to COGNOZA TECHNOLOGIES</h1>
+                                <p>
+                                    We work software as your requirement.ERP for manufacturing business.
+                                </p>
+                                <div class="hero-buttons">
+                                    <a href="#" class="btn btn-primary me-2">Read More</a>
+                                    <a href="#" class="btn btn-danger">Contact Us</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 illustration text-center text-lg-end">
+                                <img src="./@img/slider-1.png" alt="Hosting Illustration" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="container hero-section">
+                        <div class="row align-items-center d-flex">
+                            <div class="col-lg-6 hero-text text-lg-start text-center">
+                                <h1>IOT PROJECT Application Devlopment</h1>
+                                <p>WE WORK RFID PROJECT. (vehicle tracking system)
+                                </p>
+                                <div class="hero-buttons">
+                                    <a href="#" class="btn btn-primary me-2">Discover More</a>
+                                    <a href="#" class="btn btn-danger">Get Started</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 illustration text-center text-lg-end">
+                                <img src="./@img/slider-2.png" alt="Hosting Illustration" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <div class="container hero-section">
+                        <div class="row align-items-center d-flex">
+                            <div class="col-lg-6 hero-text text-lg-start text-center">
+                                <h1>Reliable Web Hosting</h1>
+                                <p>Reliable web hosting ensures your website is always accessible, secure, and performs
+                                    optimally.
+                                </p>
+                                <div class="hero-buttons">
+                                    <a href="#" class="btn btn-primary me-2">Discover More</a>
+                                    <a href="#" class="btn btn-danger">Get Started</a>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 illustration text-center text-lg-end">
+                                <img src="./@img/slider.png" alt="Hosting Illustration" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+
+    <br>
+    <section class="ourservices">
+        <!-- Services Section -->
+        <section class="services-section py-5">
+            <div class="container">
+                <h5 class="lightgreen" style="text-align: center;">Services</h5>
+                <h2 class="text-center mb-4 boldblack">Tours & Travel Services</h2>
+                <div class="row g-4">
+                    <!-- Card 1 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card text-center h-100">
+                            <div class="card-body">
+                                <div class="icon mb-3">
+                                    <i class="bi bi-gear"></i>
+                                </div>
+                                <h5 class="card-title">Software Development</h5>
+                                <p class="card-text">Find the best travel guides to help you explore the world.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card text-center h-100">
+                            <div class="card-body">
+                                <div class="icon mb-3">
+                                    <i class="bi bi-shield-lock"></i>
+                                </div>
+                                <h5 class="card-title">Maintenance and Support</h5>
+                                <p class="card-text">Book tickets with ease for your favorite destinations worldwide.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card text-center h-100">
+                            <div class="card-body">
+                                <div class="icon mb-3">
+                                    <i class="bi bi-laptop"></i>
+                                </div>
+                                <h5 class="card-title">Website development</h5>
+                                <p class="card-text">Reserve the best hotels and accommodations at your convenience.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card text-center h-100">
+                            <div class="card-body">
+                                <div class="icon mb-3">
+                                    <i class="bi bi-app"></i>
+                                </div>
+                                <h5 class="card-title">Android Development</h5>
+                                <p class="card-text">Expert travel guidance to make your journey seamless.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card text-center h-100">
+                            <div class="card-body">
+                                <div class="icon mb-3">
+                                    <i class="bi bi-currency-exchange"></i>
+                                </div>
+                                <h5 class="card-title">Trading devlop</h5>
+                                <p class="card-text">Hassle-free ticket booking for a stress-free travel experience.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card text-center h-100">
+                            <div class="card-body">
+                                <div class="icon mb-3">
+                                    <i class="bi bi-phone"></i>
+                                </div>
+                                <h5 class="card-title">IoT Applications</h5>
+                                <p class="card-text">Choose from a wide range of hotels to fit your needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <br>
+    <section class="aboutus">
+        <!-- About Us Section -->
+        <div class="container about-section">
+            <div class="row align-items-center">
+                <!-- Text Content -->
+                <div class="col-lg-6 about-text">
+                    <h2>About Us</h2>
+                    <p>This company is started in 2014. We have given many customer customizations by making it
+                        software. Our work is to make the customer work easy. We do our work honestly. This is our aim.
+                        Our software is very easy to use and very quick. We work in many technologies. Desktop
+                        Application, Android Application, Web Application,IOT Application</p>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+                <!-- Illustration -->
+                <div class="col-lg-6 about-illustration text-center text-lg-end">
+                    <img src="./@img/about.png" alt="About Us Illustration">
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <section class="manage">
+        <div class="container-fluid manage-section position-relative">
+            <div class="custom-shape"></div>
+            <div class="container">
+                <div class="row align-items-center">
+                    <!-- Illustration Column -->
+                    <div class="col-lg-6 mb-4 mb-lg-0">
+                        <div class="manage-illustration">
+                            <img src="./@img/manage.png" alt="Manage Server Illustration">
+                        </div>
+                    </div>
+                    <!-- Text Column -->
+                    <div class="col-lg-6 manage-text">
+                        <h2>Let us manage your web site</h2>
+                        <p>We believe in quality Work . We work with the best to get the best. And then we sell the
+                            best, for exactly the price it should cost. It's the very simple system at the heart of
+                            everything we make.</p>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <section class="price">
+        <div class="container">
+            <h2 class="pricing-title">Our Pricing</h2>
+            <div class="row mt-5">
+                <!-- Start of Pricing Card 1 -->
+                <div class="col-md-4">
+                    <div class="cardpricing">
+                        <div class="price-price">$49</div>
+                        <h5 class="price-title">STARTUP</h5>
+                        <p class="price-text">2GB RAM</p>
+                        <p class="price-text">20GB SSD Cloud Storage</p>
+                        <p class="price-text">Weekly Backups</p>
+                        <p class="price-text">DDoS Protection</p>
+                        <p class="price-text">Full Root Access</p>
+                        <p class="price-text">24/7/365 Tech Support</p>
+                        <button class="btn btn-customprice">See Detail</button>
+                    </div>
+                </div>
+                <!-- End of Pricing Card 1 -->
+
+                <!-- Start of Pricing Card 2 -->
+                <div class="col-md-4">
+                    <div class="cardpricing">
+                        <div class="price-price">$99</div>
+                        <h5 class="price-title">STANDARD</h5>
+                        <p class="price-text">4GB RAM</p>
+                        <p class="price-text">50GB SSD Cloud Storage</p>
+                        <p class="price-text">Weekly Backups</p>
+                        <p class="price-text">DDoS Protection</p>
+                        <p class="price-text">Full Root Access</p>
+                        <p class="price-text">24/7/365 Tech Support</p>
+                        <button class="btn btn-customprice">See Detail</button>
+                    </div>
+                </div>
+                <!-- End of Pricing Card 2 -->
+
+                <!-- Start of Pricing Card 3 -->
+                <div class="col-md-4">
+                    <div class="cardpricing">
+                        <div class="price-price">$149</div>
+                        <h5 class="price-title">BUSINESS</h5>
+                        <p class="price-text">8GB RAM</p>
+                        <p class="price-text">100GB SSD Cloud Storage</p>
+                        <p class="price-text">Weekly Backups</p>
+                        <p class="price-text">DDoS Protection</p>
+                        <p class="price-text">Full Root Access</p>
+                        <p class="price-text">24/7/365 Tech Support</p>
+                        <button class="btn btn-customprice">See Detail</button>
+                    </div>
+                </div>
+                <!-- End of Pricing Card 3 -->
+            </div>
+        </div>
+    </section>
+    <br>
+    <section class="testimonal">
+        <!-- Testimonial Section -->
+        <section class="testimonial-section">
+            <div class="container">
+                <h5 class="lightgreen" style="text-align: center;">Testimonial</h5>
+                <h2 class="text-center mb-4 boldblack">What Our Clients Say</h2>
+                <div class="row">
+                    <div class="col-md-4 testimonial">
+                        <img src="./@img/pngegg (16).png" alt="Client 1">
+                        <h5>John Doe</h5>
+                        <p>"Had an amazing experience with Traveler. Highly recommended!"</p>
+                    </div>
+                    <div class="col-md-4 testimonial">
+                        <img src="./@img/pngegg (17).png" alt="Client 2">
+                        <h5>Jane Smith</h5>
+                        <p>"The trip was well organized, and everything went smoothly!"</p>
+                    </div>
+                    <div class="col-md-4 testimonial">
+                        <img src="./@img/pngegg (16).png" alt="Client 3">
+                        <h5>Mike Johnson</h5>
+                        <p>"Fantastic service and great value for money. Will use again!"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </section>
+
+    <section class="footer">
+        <footer class="bg-dark text-light pt-5 pb-4">
+            <div class="container">
+                <div class="row">
+                    <!-- About Section -->
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h5 class="text-uppercase font-weight-bold mb-3">About Us</h5>
+                        <p>We provide top-notch tech services to empower businesses. From web hosting to cloud
+                            solutions, we're here to support your journey.</p>
+                    </div>
+
+                    <!-- Quick Links Section -->
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h5 class="text-uppercase font-weight-bold mb-3">Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-light">Home</a></li>
+                            <li><a href="#" class="text-light">About</a></li>
+                            <li><a href="#" class="text-light">Services</a></li>
+                            <li><a href="#" class="text-light">Pricing</a></li>
+                            <li><a href="#" class="text-light">Contact Us</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Resources Section -->
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h5 class="text-uppercase font-weight-bold mb-3">Resources</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-light">Blog</a></li>
+                            <li><a href="#" class="text-light">Documentation</a></li>
+                            <li><a href="#" class="text-light">Support</a></li>
+                            <li><a href="#" class="text-light">FAQs</a></li>
+                            <li><a href="#" class="text-light">Affiliate Program</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact & Social Section -->
+                    <div class="col-lg-3 col-md-6 mb-4">
+                        <h5 class="text-uppercase font-weight-bold mb-3">Get in Touch</h5>
+                        <p><i class="bi bi-envelope"></i> support@hostit.com</p>
+                        <p><i class="bi bi-telephone"></i> +01 1234 567 890</p>
+                        <p><i class="bi bi-geo-alt"></i> 1234 Tech Street, Silicon Valley</p>
+                        <!-- Social Media Links -->
+                        <div class="d-flex">
+                            <a href="#" class="text-light me-3"><i class="bi bi-facebook"></i></a>
+                            <a href="#" class="text-light me-3"><i class="bi bi-twitter"></i></a>
+                            <a href="#" class="text-light me-3"><i class="bi bi-linkedin"></i></a>
+                            <a href="#" class="text-light"><i class="bi bi-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bottom Footer -->
+                <div class="text-center pt-4 border-top mt-4">
+                    <p>&copy; 2024 HOSTIT. All rights reserved. | <a href="#" class="text-light">Privacy Policy</a> | <a
+                            href="#" class="text-light">Terms of Service</a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="boostrap/js/bootstrap.js"></script> -->
+    <script src="testimonal.js"></script>
+</body>
+
+</html>
